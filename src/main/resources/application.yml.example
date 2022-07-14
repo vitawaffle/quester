@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: <jdbc_connection_url> # for example: jdbc:postgresql://localhost:5432/quester
+    username: <database_username>
+    password: <database_password>
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    contexts: default, test # remove test in production
+  thymeleaf:
+    cache: false
+  mail:
+    host: <mail_server_host> # for example: smtp.gmail.com
+    port: <mail_server_port> # for example: 587
+    username: <mail_username>
+    password: <mail_password>
+logging:
+  level:
+    root: INFO
+  file:
+    name: log/application.log
