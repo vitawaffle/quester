@@ -1,0 +1,9 @@
+{
+    "properties": [
+        {
+            "name": "application.defaultLanguage",
+            "type": "java.lang.String",
+            "description": "Server api default language, unless the client specified another one"
+        }
+    ]
+}
