@@ -18,3 +18,8 @@ logging:
     root: INFO
   file:
     name: log/application.log
+application:
+  defaultLanguage: en
+  auth:
+    jwt:
+      secret: <secret_key>

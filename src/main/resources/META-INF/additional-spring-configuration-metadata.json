@@ -4,6 +4,11 @@
             "name": "application.defaultLanguage",
             "type": "java.lang.String",
             "description": "Server api default language, unless the client specified another one"
+        },
+        {
+            "name": "application.auth.jwt.secret",
+            "type": "java.lang.String",
+            "description": "A secret key for authorization JWT generation"
         }
     ]
 }
