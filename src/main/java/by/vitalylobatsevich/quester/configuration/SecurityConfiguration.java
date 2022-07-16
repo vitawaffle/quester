@@ -12,17 +12,16 @@ public class SecurityConfiguration {
     @Bean
     public SecurityFilterChain securityFilterChain(final HttpSecurity http) throws Exception {
         return http
-                .authorizeRequests(
-                        customizer -> customizer
-                                .antMatchers(
-                                        HttpMethod.GET,
-                                        "/",
-                                        "/css/**",
-                                        "/js/**",
-                                        "/img/**",
-                                        "/favicon.ico"
-                                ).permitAll()
-                                .anyRequest().authenticated()
+                .authorizeRequests(customizer -> customizer
+                        .antMatchers(
+                                HttpMethod.GET,
+                                "/",
+                                "/css/**",
+                                "/js/**",
+                                "/img/**",
+                                "/favicon.ico"
+                        ).permitAll()
+                        .anyRequest().authenticated()
                 )
                 .build();
     }

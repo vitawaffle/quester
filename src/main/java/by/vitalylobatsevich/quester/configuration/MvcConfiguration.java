@@ -19,15 +19,14 @@ public class MvcConfiguration implements WebMvcConfigurer {
 
     @Value("${application.defaultLanguage:en}")
     private String defaultLanguage;
-    
+
     @Bean
     public LocaleResolver localeResolver() {
         val localeResolver = new CookieLocaleResolver();
         localeResolver.setDefaultLocale(
-                new Locale
-                        .Builder()
-                        .setLanguage(defaultLanguage)
-                        .build()
+                new Locale.Builder()
+                          .setLanguage(defaultLanguage)
+                          .build()
         );
         localeResolver.setCookieName("lang");
         return localeResolver;
